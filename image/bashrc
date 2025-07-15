@@ -1,4 +1,5 @@
 # env vars
+export SHELL="bash"
 export EDITOR="nvim"
 export TERM=tmux-256color
 export PYTHONDONTWRITEBYTECODE="true"
