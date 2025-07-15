@@ -14,7 +14,6 @@ vim.opt.hlsearch = false
 vim.opt.mousemodel = "extend"
 vim.opt.pumheight = 15
 vim.opt.swapfile = false
-vim.opt.shell = "/bin/bash"
 
 -- use clipboard-osc52 to be able to copy from inside a container
 vim.g.clipboard = {
@@ -31,7 +30,6 @@ vim.g.clipboard = {
 
 -- keymaps
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
-vim.keymap.set("n", "grf", "<CMD>echo 'Formatting is disabled in minimal nvim version!'<CR>")
 
 -- create autocmd
 vim.api.nvim_create_autocmd("TextYankPost", {
