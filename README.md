@@ -1,15 +1,7 @@
-# nvim-config
-neovim configuration directory (written 100% by myself)
+# nvim-full
+neovim configuration directory, with all the goodies, baked to be used inside a container
 
-# installation
+# usage
 ```sh
-git clone https://github.com/daniele821/nvim-config "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+podman run --rm -it ghcr.io/daniele821/neovim 
 ```
-
-# notes 
-
-- oil.nvim can be set as default file explorer IF NOT LAZY LOADED. 
-```sh
-nvim oil-ssh://[username@]hostname[:port]/[path]
-```
-- [vim spell files](https://www.vim.org/mirrors.php) 
