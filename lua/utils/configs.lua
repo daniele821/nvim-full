@@ -8,7 +8,7 @@ return {
 		"lua-language-server",
 		"stylua",
         -- python
-		"ruff",
+		"python-lsp-server",
         -- webdev
 		"css-lsp",
 		"html-lsp",
