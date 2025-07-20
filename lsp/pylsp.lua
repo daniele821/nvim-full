@@ -3,7 +3,7 @@ return {
 		pylsp = {
 			plugins = {
 				pycodestyle = {
-					maxLineLength = 100,
+					maxLineLength = 150,
 				},
 			},
 		},
