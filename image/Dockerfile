@@ -1,7 +1,7 @@
 FROM fedora
 
 # install needed packages
-RUN dnf install -y lsd ripgrep bat git bash-completion \
+RUN dnf install -y lsd ripgrep bat git bash-completion htop \
     neovim git unzip wget ripgrep tree-sitter-cli nodejs npm python3 golang && \
     dnf autoremove -y && dnf clean all
 
