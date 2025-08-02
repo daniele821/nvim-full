@@ -23,6 +23,10 @@ alias la='ls -A'
 alias ll='ls -l'
 alias lla='ls -lA'
 
+# fix bindings
+for i in - {0..9}; do bind -r "\e$i"; done
+bind -x '"\C-l": clear'
+
 # prompt
 function __cleanup_prompt__() {
     \builtin local -r retval="$?"
