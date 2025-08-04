@@ -14,16 +14,12 @@ return {
 		"html-lsp",
 		"typescript-language-server",
 		"jq",
-        -- go
-		"gopls",
-		"goimports",
 	},
 	formatters_by_ft = {
 		bash = { "shfmt" },
 		sh = { "shfmt" },
 		json = { "jq" },
 		lua = { "stylua" },
-		go = { "goimports" },
 	},
 	linters_by_ft = {
 		bash = { "shellcheck" },
