@@ -9,3 +9,6 @@ RUN dnf install -y lsd ripgrep bat git bash-completion htop bat jq zoxide \
 RUN git clone --depth 1 https://github.com/daniele821/nvim-full /root/.config/nvim && \
     nvim --headless +StarterPack +qa && rm -rf /root/.cache /root/.npm && \
     cp /root/.config/nvim/image/bashrc /root/.bashrc && cp /root/.config/nvim/image/gitconfig /root/.gitconfig
+
+# add /data volume
+VOLUME /data
