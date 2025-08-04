@@ -1,7 +1,7 @@
 FROM fedora
 
 # install needed packages
-RUN dnf install -y lsd ripgrep bat git bash-completion htop bat jq zoxide \
+RUN dnf install -y --setopt=install_weak_deps=False lsd ripgrep bat git bash-completion htop bat jq zoxide \
     neovim git unzip wget ripgrep tree-sitter-cli nodejs npm python3 gcc && \
     dnf autoremove -y && dnf clean all
 
