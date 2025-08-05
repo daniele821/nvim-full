@@ -11,6 +11,3 @@ RUN git clone https://daniele821@github.com/daniele821/nvim-full.git /root/.conf
     git -C /root/.config/nvim config user.name "Daniele Muffato" && git -C /root/.config/nvim config user.email "danixgithub1@gmail.com" && \
     nvim --headless +StarterPack +qa && rm -rf /root/.cache /root/.npm && \
     cp /root/.config/nvim/image/bashrc /root/.bashrc && cp /root/.config/nvim/image/gitconfig /root/.gitconfig
-
-# add /data volume
-VOLUME /data
