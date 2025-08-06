@@ -14,4 +14,4 @@
     mi = merge --no-commit --no-ff
     nuke = "!git reset --hard -q HEAD && git clean -fdq"
 [credential]
-    helper = store --file=/data/.git-credentials
+    helper = store
