@@ -3,10 +3,13 @@ FROM fedora
 # install needed packages
 RUN dnf install -y --setopt=install_weak_deps=False lsd ripgrep bat bash-completion htop bat jq zoxide fzf \
     neovim git unzip wget ripgrep tree-sitter-cli nodejs npm python3 gcc && \
-    dnf autoremove -y && dnf clean all
+    dnf autoremove -y && dnf clean all 
 
 # initialize neovim and bash
 RUN git clone https://daniele821@github.com/daniele821/nvim-full.git /root/.config/nvim && \
     git -C /root/.config/nvim remote set-url origin --add https://daniele821@gitlab.com/daniele821/nvim-full.git && \
     nvim --headless +StarterPack +qa && rm -rf /root/.cache /root/.npm && \
-    cp /root/.config/nvim/image/bashrc /root/.bashrc && cp /root/.config/nvim/image/gitconfig /root/.gitconfig
+    cp /root/.config/nvim/image/bashrc /root/.bashrc && cp /root/.config/nvim/image/gitconfig /root/.gitconfig 
+
+# keep container up
+CMD sleep infinity
