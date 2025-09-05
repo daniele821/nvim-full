@@ -10,6 +10,3 @@ RUN git clone https://daniele821@github.com/daniele821/nvim-full.git /root/.conf
     git -C /root/.config/nvim remote set-url origin --add https://daniele821@gitlab.com/daniele821/nvim-full.git && \
     nvim --headless +StarterPack +qa && rm -rf /root/.cache /root/.npm && \
     cp /root/.config/nvim/image/bashrc /root/.bashrc && cp /root/.config/nvim/image/gitconfig /root/.gitconfig 
-
-# keep container up
-CMD sleep infinity
