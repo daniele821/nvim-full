@@ -1,3 +1,8 @@
+#!/bin/bash
+
+# include bash
+. /etc/bashrc
+
 # env vars
 export SHELL="bash"
 export EDITOR="nvim"
