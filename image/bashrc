@@ -3,11 +3,6 @@ export SHELL="bash"
 export EDITOR="nvim"
 export TERM=tmux-256color
 export PYTHONDONTWRITEBYTECODE="true"
-export PYTHON_HISTORY="/dev/null"
-export NODE_REPL_HISTORY="/dev/null"
-export GOPATH="$HOME/.local/share/go"
-export RUSTUP_HOME="$HOME/.local/share/rustup"
-export CARGO_HOME="$HOME/.local/share/cargo"
 
 # lsd
 function tree() {
@@ -27,8 +22,18 @@ alias lla='ls -lA'
 alias cat='bat'
 
 # zoxide
-export _ZO_EXCLUDE_DIRS="$HOME:$HOME/.local*:$HOME/.cache*:/afs*:/bin*:/boot*:/dev*:/etc*:/lib*:/lib64*:/media*:/mnt*:/opt*:/proc*:/run*:/sbin*:/srv*:/sys*:/tmp*:/usr*:/var*:/"
-eval "$(zoxide init bash)"
+eval "$(zoxide init bash --no-cmd)"
+function z() {
+    if (cd "$@" &>/dev/null); then
+        cd "$@" &>/dev/null
+    else
+        case "$(zoxide query -l "$@" | wc -l)" in
+        0 | 1) __zoxide_z "$@" &>/dev/null || return 1 ;;
+        *) __zoxide_zi "$@" &>/dev/null || return 1 ;;
+        esac
+    fi
+}
+alias zi="__zoxide_zi"
 
 # fix bindings
 for i in - {0..9}; do bind -r "\e$i"; done
